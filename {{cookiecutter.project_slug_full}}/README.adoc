@@ -57,9 +57,9 @@ Include the available theme component partial(s) in your theme's template file(s
 ----
 <!-- ... -->
 
-{{ if templates.Exists "partials/vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/include.html" }}
-    {{ partial "vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/include.html" . }}
-{{ end }}
+{% raw %}{{ if templates.Exists "partials/vendor/{% endraw %}{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}{% raw %}/include.html" }}{% endraw %}
+    {% raw %}{{ partial "vendor/{% endraw %}{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}{% raw %}/include.html" . }}{% endraw %}
+{% raw %}{{ end }}{% endraw %}
 
 <!-- ... -->
 ----
