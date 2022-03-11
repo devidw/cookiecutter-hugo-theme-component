@@ -1,0 +1,7 @@
+{
+    "github_username": "devidw",
+    "project_name": "Composer Boilerplate",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "project_slug_full": "{{ 'hugo-theme-component-' + cookiecutter.project_slug }}",
+    "project_short_description": "Composer Boilerplate contains all the boilerplate you need to create a Composer package."
+}

@@ -1,0 +1,30 @@
+= Cookiecutter Hugo Theme Component
+
+Boilerplate template to create new https://gohugo.io/hugo-modules/theme-components/[hugo theme components] blazingly fast.
+
+== Usage
+Follow the below steps to create a new project.
+
+=== 1. Install https://github.com/cookiecutter/cookiecutter[cookiecutter]
+
+[source,sh]
+----
+pip install cookiecutter
+----
+
+
+=== 2. Create a new project
+
+For the first time:
+
+[source,sh]
+----
+cookiecutter https://github.com/devidw/cookiecutter-hugo-theme-component.git
+----
+
+Afterwards:
+
+[source,sh]
+----
+cookiecutter cookiecutter-hugo-theme-component
+----

@@ -1,0 +1,70 @@
+= {{ cookiecutter.project_name }}
+
+{{ cookiecutter.project_short_description }}
+
+
+== Installation
+
+=== 1. Add submodule
+
+Clone this theme component to your project's `themes` directory:
+
+[source,cmd]
+----
+git submodule add https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug_full}} ./themes/{{cookiecutter.project_slug_full}}
+----
+
+
+=== 2. Add config
+
+Add this theme component to your list of themes inside your project's `config` file (either `.yaml`, `.toml` or `.json`):
+
+|===
+| Format | Syntax
+
+| `config.yaml`
+a|
+[source,yaml]
+----
+theme: 
+  - "…"
+  - "{{cookiecutter.project_slug_full}}"
+  - "…"
+----
+
+| `config.toml`
+a| [source,toml]
+----
+theme = ["…", "{{cookiecutter.project_slug_full}}", "…"]
+----
+
+| `config.json`
+a| [source,json]
+----
+"theme": ["…", "{{cookiecutter.project_slug_full}}", "…"]
+----
+
+
+|===
+
+
+
+=== 3. Load the partial
+
+Include the available theme component partial(s) in your theme's template file(s):
+
+[source,html]
+----
+<!-- ... -->
+
+{{ if templates.Exists "partials/vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/include.html" }}
+    {{ partial "vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/include.html" . }}
+{{ end }}
+
+<!-- ... -->
+----
+
+
+***
+
+_This https://gohugo.io/hugo-modules/theme-components/[hugo theme component] was scaffolded with the https://github.com/devidw/cookiecutter-hugo-theme-component[cookiecutter-hugo-theme-component] template._
