@@ -49,7 +49,9 @@ a| [source,json]
 
 
 
-=== 3. Load the partial
+=== 3. Embed theme component
+
+==== Partial(s)
 
 Include the available theme component partial(s) in your theme's template file(s):
 
@@ -63,6 +65,23 @@ Include the available theme component partial(s) in your theme's template file(s
 
 <!-- ... -->
 ----
+
+
+==== Style(s)
+
+Import the available theme component style(s) in your theme's stylesheet(s):
+
+.`/assets/sass/my-custom-stylesheet.sass`
+[source,sass]
+----
+// ...
+
+@import ./vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/import
+
+// ...
+----
+
+NOTE: Stylesheets are located in the `/assets/sass` directory. If your theme's stylesheet(s) are located in a different directory, make sure to adjust the import path accordingly. For example, if your theme's styles are located in `/assets/css/my-custom-stylesheet.sass`, the import path should be `../sass/vendor/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/import`.
 
 
 ***
