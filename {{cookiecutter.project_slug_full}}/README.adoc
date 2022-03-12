@@ -43,14 +43,13 @@ a| [source,json]
 ----
 "theme": ["…", "{{cookiecutter.project_slug_full}}", "…"]
 ----
-
-
 |===
 
 
 
 === 3. Embed theme component
 
+{% if cookiecutter.feature_partials == 'Yes' %}
 ==== Partial(s)
 
 Include the available theme component partial(s) in your theme's template file(s):
@@ -65,8 +64,10 @@ Include the available theme component partial(s) in your theme's template file(s
 
 <!-- ... -->
 ----
+{% endif %}
 
 
+{% if cookiecutter.feature_sass == 'Yes' %}
 ==== Style(s)
 
 Import the available theme component style(s) in your theme's stylesheet(s):
@@ -82,7 +83,26 @@ Import the available theme component style(s) in your theme's stylesheet(s):
 ----
 
 NOTE: Stylesheets are located in the `/assets/sass` directory. If your theme's stylesheet(s) are located in a different directory, make sure to adjust the import path accordingly. For example, if your theme's styles are located in `/assets/css/my-custom-stylesheet.sass`, the import path should be `../sass/{{cookiecutter.project_namespace}}/import`.
+{% endif %}
 
+
+{% if cookiecutter.feature_js == 'Yes' %}
+==== Script(s)
+
+Load the available theme component script(s) in your theme's template file(s):
+
+[source,html]
+----
+<!-- ... -->
+{% raw %}
+{{/* Load JavaScript */}}
+
+{{ $js := resources.Get "js/{% endraw %}{{cookiecutter.project_namespace}}{% raw %}/script.js" | minify | fingerprint }}
+<script src="{{ $js.Permalink }}"></script>
+{% endraw %}
+<!-- ... -->
+----
+{% endif %}
 
 ***
 

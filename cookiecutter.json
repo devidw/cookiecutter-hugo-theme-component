@@ -1,16 +1,20 @@
 {
     "github_username": "devidw",
-    "project_name": "Hugo Theme Component Boilerplate",
+    "project_name": "Unstoppable",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_slug_full": "{{ 'hugo-theme-component-' + cookiecutter.project_slug }}",
     "project_namespace": "{{ 'vendor/' + cookiecutter.github_username + '/' + cookiecutter.project_slug }}",
-    "project_short_description": "Hugo theme component boilerplate contains all the boilerplate you need to create a hugo theme component.",
-    "feature_js": [
-        "y",
-        "n"
+    "project_short_description": "Hugo theme component boilerplate contains all the boilerplate you need to create an unstoppable hugo theme component.",
+    "feature_partials": [
+        "Yes",
+        "No"
     ],
-    "feature_css": [
-        "y",
-        "n"
+    "feature_sass": [
+        "Yes",
+        "No"
+    ],
+    "feature_js": [
+        "Yes",
+        "No"
     ]
 }
