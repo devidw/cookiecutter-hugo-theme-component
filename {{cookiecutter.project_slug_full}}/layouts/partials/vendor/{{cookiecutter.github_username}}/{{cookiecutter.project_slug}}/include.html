@@ -1,5 +1,8 @@
 {% raw %}
 
+{{/* Load JavaScript */}}
 
+{{ $js := resources.Get "js/{% endraw %}{{cookiecutter.project_namespace}}{% raw %}/script.js" | minify | fingerprint }}
+<script src="{{ $js.Permalink }}"></script>
 
 {% endraw %}
