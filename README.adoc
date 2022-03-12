@@ -43,4 +43,4 @@ cookiecutter ./path/to/your/modified/cookiecutter-hugo-theme-component
 
 You will be prompted to enter the details specified in link:./cookiecutter.json[cookiecutter.json].
 
-NOTE: For now the `feature_*` answers only apply to the conditional creation of the `README.adoc` file. Not the actual directory structure in the project.
+NOTE: For now, the `feature_*` answers only apply to the conditional creation of the `README.adoc` file. Not the actual directory structure in the project.
