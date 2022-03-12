@@ -3,14 +3,14 @@
     "project_name": "Hugo Theme Component Boilerplate",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_slug_full": "{{ 'hugo-theme-component-' + cookiecutter.project_slug }}",
-    "project_namespace": "'vendor/' + {{ cookiecutter.github_username + '/' + cookiecutter.project_slug }}",
+    "project_namespace": "{{ 'vendor/' + cookiecutter.github_username + '/' + cookiecutter.project_slug }}",
     "project_short_description": "Hugo theme component boilerplate contains all the boilerplate you need to create a hugo theme component.",
     "feature_js": [
-        true,
-        false
+        "y",
+        "n"
     ],
     "feature_css": [
-        true,
-        false
+        "y",
+        "n"
     ]
 }
