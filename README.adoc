@@ -2,8 +2,10 @@
 
 Boilerplate template to create new https://gohugo.io/hugo-modules/theme-components/[hugo theme components] blazingly fast.
 
+
 == Usage
 Follow the below steps to create a new project.
+
 
 === 1. Install https://github.com/cookiecutter/cookiecutter[cookiecutter]
 
@@ -28,3 +30,17 @@ Afterwards:
 ----
 cookiecutter cookiecutter-hugo-theme-component
 ----
+
+If you would like to modify the cookiecutter, you can do so by cloning the repo and modifying the files. To use your modified cookiecutter version, you can call cookiecutter with the path of your modified cookiecutter directory:
+
+[source,sh]
+----
+cookiecutter ./path/to/your/modified/cookiecutter-hugo-theme-component
+----
+
+
+=== 3. Enter your project details
+
+You will be prompted to enter the details specified in link:./cookiecutter.json[cookiecutter.json].
+
+NOTE: The the `feature_*` answers only apply to the conditional creation of the `README.adoc` file. Not the actual directory structure in the project.
